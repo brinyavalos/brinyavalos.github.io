@@ -1,0 +1,28 @@
+body{
+    background-color:lightpink; 
+    text-align: center;
+    color:black;
+    font-family: Cambria;
+}
+a{
+color:deeppink;
+text-decoration: none;
+}
+a.hover{
+    color:lavenderblush;
+}
+main{
+    text-align: left;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+h2{
+    text-align: center;
+}
+img{
+ width: 100%
+}
+figure{
+    text-align: center;
+    font-style:italic; 
+}
