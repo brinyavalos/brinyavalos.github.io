@@ -1,15 +1,15 @@
 body{
-    background-color:rgb(195, 236, 250);
+    background-color:lavenderblush;
     color:black;
     font-family: Cambria;
 }
 a{
-    color:#05afe8; 
+    color: deeppink; 
     text-decoration:underline;
 }
 
 table tr:nth-child(even) {
-    background-color:deepskyblue;   
+    background-color:pink; 
     color: black;
 }
 table tr:nth-child(odd){
