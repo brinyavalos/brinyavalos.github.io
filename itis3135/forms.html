@@ -4,7 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> ITIS 3135 Forms《♡》 Brittany Avalos-Ortiz's Beloved Alpaca</title>
-    <link rel="stylesheet" href="styles/default.css"> 
+    <style>
+        body{
+    background-color:lavenderblush;
+    color:black;
+    font-family: Cambria;
+}
+a{
+    color: deeppink; 
+    text-decoration:underline;
+}
+main{
+    text-align: left;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+h1, h2, nav, .design, footer{
+    text-align: center;
+}
+form{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+label, input {
+    margin-left: auto;
+    margin-right: auto;
+}
+.divider{
+    border: 5px double black;
+}
+.reset, .submit{
+   border: 2.5px solid hotpink;
+}
+    </style> 
 </head>
 <body>
     <header>
@@ -23,12 +57,47 @@
     </header>
     <main>
         <h2>Forms</h2>
-        <form>
-            <label for="fname">First name:</label><br>
-            <input type="text" id="fname" name="fname"><br>
-            <label for="lname">Last name:</label><br>
-            <input type="text" id="lname" name="lname">
+        <p>Fill out this form to provide info for Beloved Alpaca's</p>
+        <div class="divider">
+        <form action="#" method="post" id="businessForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required placeholder="Brittany Avalos-Ortiz" size="30"><br>
+            <br>
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}" placeholder="(123)456-7890" size="15"><br>
+            <br>
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required placeholder="brittany@example.com" size="30"><br>
+            <br>
+            <label>Interests:</label>
+            <input type="checkbox" id="interest1" name="interest1" value="sports" required> Sports
+            <input type="checkbox" id="interest2" name="interest2" value="music"> Music
+            <input type="checkbox" id="interest3" name="interest3" value="travel"> Travel
+            <input type="checkbox" id="interest4" name="interest4" value="gaming"> Gaming
+            <br>
+            <br>
+            <label>Gender:</label>
+            <input type="radio" id="male" name="gender" value="male"> Male
+            <input type="radio" id="female" name="gender" value="female"> Female
+            <input type="radio" id="female" name="gender" value="other"> would rather not say
+            <br>
+            <br>
+            <label for="country">Country:</label>
+            <select id="country" name="country">
+                <option value="usa">United States</option>
+                <option value="canada">Canada</option>
+                <option value="uk">United Kingdom</option>
+                <option value="jap">Japan</option>
+                <option value="ch">China</option>
+                <option value="sp">Spain</option>
+                <option value="gm">Germany</option>
+
+            </select><br>
+            <br>
+            <input type="reset" value="Reset" class="reset">
+            <input type="submit" value="Submit" class="submit">
         </form>
+        </div>
     </main>
     <footer>
         <nav>
