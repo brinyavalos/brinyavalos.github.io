@@ -1,0 +1,26 @@
+body{
+    background-color:rgb(195, 236, 250);
+    text-align: center; 
+    color:black;
+    font-family: Cambria;
+}
+a{
+    color:rbg(5,175,232); 
+    text-decoration:underline;
+}
+
+table tr:nth-child(even) {
+    background-color:deepskyblue;   
+    color: black;
+}
+table tr:nth-child(odd){
+    background-color:ghostwhite;
+    color: black;
+
+}
+table, th, td, tr{
+    border: 1.5px solid black;
+    border-collapse: collapse;
+    text-align: center;
+    padding: 1px 4px 1px 4px;
+}
