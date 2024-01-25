@@ -1,6 +1,5 @@
 body{
     background-color:rgb(195, 236, 250);
-    text-align: center; 
     color:black;
     font-family: Cambria;
 }
@@ -23,4 +22,8 @@ table, th, td, tr{
     border-collapse: collapse;
     text-align: center;
     padding: 1px 4px 1px 4px;
+    text-align: center;
+}
+h2{
+    text-align: center;
 }
