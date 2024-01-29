@@ -5,7 +5,7 @@ body{
 }
 a{
     color: deeppink; 
-    text-decoration:underline;
+    text-decoration:none;
 }
 
 table tr:nth-child(even) {
