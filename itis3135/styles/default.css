@@ -4,6 +4,7 @@ body{
     color:black;
     font-family: Georgia;
 }
+/*https://coolors.co/fff0f5-ffc5d0-f7d6d0-fb6090-821d30*/
 a{
 color:deeppink;
 text-decoration:none;
@@ -34,4 +35,8 @@ nav{
 }
 .design {
     font-size: 16.5px;
+}
+a.hover{
+    text-decoration: solid;
+    color: white;
 }
