@@ -40,3 +40,7 @@ a.hover{
     text-decoration: solid;
     color: white;
 }
+footer{
+    position: fixed; 
+    bottom: 0;
+}
