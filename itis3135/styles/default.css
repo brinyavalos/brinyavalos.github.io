@@ -1,7 +1,7 @@
 body{
     background-color:lavenderblush; 
     text-align: center;
-    color:black;
+    color:rgb(8, 8, 8);;
     font-family: Georgia;
     min-height: 100vh;
     display: flex;
@@ -21,7 +21,7 @@ main{
     margin-left: 20%;
     margin-right: 20%;
 }
-h2{
+h2, h3{
     text-align: center;
 }
 img{
@@ -40,10 +40,23 @@ nav{
 .design {
     font-size: 16.5px;
 }
-a.hover{
-    text-decoration: solid;
+a:hover{
+    text-decoration: none;
     color: white;
 }
 footer{
-        margin-top: auto;
+    margin-top: auto;
+}
+.crap {
+    list-style-type: circle;
+    font-size: .199in; 
+    margin-left: 25%;
+    margin-right: 25%;
+}
+.web{
+    color: rgb(8, 8, 8);
+    text-decoration: underline;
+}
+.good_bad{
+    text-align: left;
 }
