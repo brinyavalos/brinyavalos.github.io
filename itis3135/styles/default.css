@@ -3,6 +3,10 @@ body{
     text-align: center;
     color:black;
     font-family: Georgia;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    
 }
 /*https://coolors.co/fff0f5-ffc5d0-f7d6d0-fb6090-821d30*/
 a{
@@ -41,6 +45,5 @@ a.hover{
     color: white;
 }
 footer{
-    position: fixed; 
-    bottom: 0;
+        margin-top: auto;
 }
