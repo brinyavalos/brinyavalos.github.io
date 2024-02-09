@@ -47,6 +47,7 @@ a:hover{
 footer{
     margin-top: auto;
 }
+<!--evaluations-->
 .crap {
     list-style-type: none;
     font-size: .165in; 
@@ -65,4 +66,60 @@ footer{
 }
 p{
     font-size: 18px;
+}
+<!--table-->
+table tr:nth-child(even) {
+    background-color:pink; 
+    color: black;
+}
+table tr:nth-child(odd){
+    background-color:ghostwhite;
+    color: black;
+
+}
+table, th, td, tr{
+    border: 1.5px solid black;
+    border-collapse: collapse;
+    text-align: center;
+    padding: 1px 4px 1px 4px;
+}
+h1, h2, h3, figcaption{
+    text-align: center;
+}
+footer{
+    text-align: center;
+}
+.table{
+    margin-left: auto; 
+    margin-right: auto;
+}
+ol{
+    font-size: 20px;
+}
+nav{
+    font-size: 18px; 
+    text-align: center;
+}
+.design {
+    font-size: 16.5px;
+}
+<!--form-->
+.design, footer{
+    text-align: center;
+}
+form{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+label, input {
+    margin-left: auto;
+    margin-right: auto;
+}
+.divider{
+    border: 5px double black;
+}
+.reset, .submit{
+   border: 2.5px solid hotpink;
 }
