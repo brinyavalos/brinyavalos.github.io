@@ -47,6 +47,9 @@ a:hover{
 footer{
     margin-top: auto;
 }
+.intro{
+    list-style-type: circle;
+}
 <!--evaluations-->
 .crap {
     list-style-type: none;
