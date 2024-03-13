@@ -11,7 +11,20 @@
     <div data-include="components/header.html"></div>
     <main>
 <h2>First Scripts</h2>
-<p>First Scripts Page</p>
+<h3 id="dateTime"></h3>
+        <label for="userName">Your Name:</label>
+        <input type="text" id="userName"><br>
+        <label for="userFeeling">How are you feeling?</label>
+        <input type="text" id="userFeeling"><br>
+        <button onclick="submitInfo()">Submit</button><br>
+        <p id="greetingMessage"></p>
+        <label for="favNumber">Enter your favorite number (0-10):</label>
+        <input type="number" id="favNumber" min="0" max="10"><br>
+        <button onclick="findPolygon()">Find Polygon Name</button><br>
+        <button onclick="randomSock()">Generate a Random Sock</button>
+        <button onclick="displaySubscriptions()">Subscription Options</button>
+        <button onclick="calculateTax()">Price After Tax</button>
+        <button onclick="provideInsult()">Click Here For Fun</button>
     </main>
     <div data-include="components/footer.html"></div>
     <script>
@@ -19,5 +32,6 @@
              document.getElementById("validation_link_css").setAttribute("href","https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
     </script>
     <script src="scripts/HTMLInclude.js"></script>
+    <script src="scripts/defaultscripts.js"></script>
 </body>
 </html>
