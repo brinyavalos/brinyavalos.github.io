@@ -16,46 +16,45 @@
     <fieldset>
         <legend>Personal Information:</legend>
         <label for="name">Name:</label>
-        <input type="text" id="name" name="name" placeholder="Brittany" required><br><br>
-        
-        <label for="mascot">Mascot:</label>
-        <input type="text" id="mascot" name="mascot" placeholder="Beloved Axolotl"required><br><br>
-        
-        <label for="image">Image:</label>
-        <input type="file" id="image" name="image" accept="image/png, image/jpeg" required><br><br>
-        
-        <label for="imageCaption">Image Caption:</label>
-        <input type="text" id="imageCaption" name="imageCaption" placeholder="HEYYY" required><br><br>
-        
-        <label for="personalBackground">Personal Background:</label>
-        <textarea id="personalBackground" name="personalBackground" placeholder="I love legos.." required></textarea><br><br>
-        
-        <label for="professionalBackground">Professional Background:</label>
-        <textarea id="professionalBackground" name="professionalBackground" placeholder="Trainer at Cava"required></textarea><br><br>
-        
-        <label for="academicBackground">Academic Background:</label>
-        <textarea id="academicBackground" name="academicBackground"  placeholder="Junior in Computer Science with 2 minors at UNC Charlotte"required></textarea><br><br>
-        
-        <label for="webDevelopmentBackground">Background in Web Development:</label>
-        <textarea id="webDevelopmentBackground" name="webDevelopmentBackground" placeholder="This class lol"required></textarea><br><br>
-        
-        <label for="primaryComputerPlatform">Primary Computer Platform:</label>
-        <input type="text" id="primaryComputerPlatform" name="primaryComputerPlatform" placeholder="Asus Zenbook Windows 11 Verison23H2"required><br><br>
-        
-        <label for="courses">Courses currently taking:</label>
-        <div id="coursesContainer">
-            <input type="text" class="course" name="courses[]" required>
-            <button type="button" onclick="addCourse()">Add Course</button>
-        </div><br><br>
-        
-        <label for="funnyThing">Funny thing?</label>
-        <textarea id="funnyThing" name="funnyThing"></textarea><br><br>
-        
-        <label for="anythingElse">Anything else?</label>
-        <textarea id="anythingElse" name="anythingElse"></textarea><br><br>
-        
-        <input type="checkbox" id="agree" name="agree" required>
-        <label for="agree">I understand that what is on this page is not password protected and I will not put anything here that I don’t want publicly available.</label><br><br>
+            <input type="text" id="name" placeholder="Brittany" required><br><br>
+
+            <label for="mascot">Mascot:</label>
+            <input type="text" id="mascot" placeholder="Beloved Axolotl" required><br><br>
+
+            <label for="image">Image:</label>
+            <input type="file" id="image" accept="image/png, image/jpeg"required><br><br><br>
+
+            <label for="imageCaption">Image Caption:</label>
+            <input type="text" id="imageCaption" placeholder="Anything you want" required><br><br>
+
+            <label for="background">Personal Background:</label>
+            <input type="text" id="background" placeholder="I LOVEE legos" required><br><br>
+
+            <label for="professional">Professional Background:</label>
+            <input type="text" id="professional" placeholder="Trainer at Cava" required><br><br>
+
+            <label for="academic">Academic Background:</label>
+            <input type="text" id="academic" placeholder="Junior at UNC Charlotte" required><br><br>
+
+            <label for="web-dev">Background in Web Development:</label>
+            <input type="text" id="web-dev" placeholder="This class lol" required><br><br>
+
+            <label for="platform">Primary Computer Platform:</label>
+            <input type="text" id="platform" placeholder="Windows 11 Verison 23H2" required><br><br>
+
+            <label for="funny">Funny Thing About You:</label>
+            <input type="text" id="funny" placeholder="i LOVE legos"><br><br>
+
+            <label for="anything">Anything Else You Would Like To Add:</label>
+            <input type="text" id="anything" placeholder="I love math!"><br><br>
+
+            <label>Courses currently taking:</label><br>
+            <div id="courses">
+                <button type="button" id="addCourseBtn">Add Course</button><br>
+            </div>
+
+            <label for="contract">"I understand that what is on this page is not password protected and I will not put anything here that I don’t want publicly available."</label>
+            <input type="checkbox" id="contract" required><br><br>
     </fieldset>
     <input type="submit" value="Submit">
     <input type="reset" value="Reset">
