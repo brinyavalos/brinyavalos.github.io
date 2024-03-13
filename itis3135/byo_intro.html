@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brittany Avalos-Ortiz's Beloved Axolotl《♡》 ITIS 3135《♡》 About Us </title>
+    <link rel="icon" type="image/png" href="images/axolotl.png">
+    <link rel="stylesheet" href="styles/default.css"> 
+</head>
+<body>
+    <div data-include="components/header.html"></div>
+    <main>
+<h2>BYO Introduction</h2>
+<h3>Time to BYO Intro page, please fill out the form below so we can create your own page.</h3>
+<form id="byoForm" onsubmit="return validateForm()">
+    <fieldset>
+        <legend>Personal Information:</legend>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Brittany" required><br><br>
+        
+        <label for="mascot">Mascot:</label>
+        <input type="text" id="mascot" name="mascot" placeholder="Beloved Axolotl"required><br><br>
+        
+        <label for="image">Image:</label>
+        <input type="file" id="image" name="image" accept="image/png, image/jpeg" required><br><br>
+        
+        <label for="imageCaption">Image Caption:</label>
+        <input type="text" id="imageCaption" name="imageCaption" placeholder="HEYYY" required><br><br>
+        
+        <label for="personalBackground">Personal Background:</label>
+        <textarea id="personalBackground" name="personalBackground" placeholder="I love legos.." required></textarea><br><br>
+        
+        <label for="professionalBackground">Professional Background:</label>
+        <textarea id="professionalBackground" name="professionalBackground" placeholder="Trainer at Cava"required></textarea><br><br>
+        
+        <label for="academicBackground">Academic Background:</label>
+        <textarea id="academicBackground" name="academicBackground"  placeholder="Junior in Computer Science with 2 minors at UNC Charlotte"required></textarea><br><br>
+        
+        <label for="webDevelopmentBackground">Background in Web Development:</label>
+        <textarea id="webDevelopmentBackground" name="webDevelopmentBackground" placeholder="This class lol"required></textarea><br><br>
+        
+        <label for="primaryComputerPlatform">Primary Computer Platform:</label>
+        <input type="text" id="primaryComputerPlatform" name="primaryComputerPlatform" placeholder="Asus Zenbook Windows 11 Verison23H2"required><br><br>
+        
+        <label for="courses">Courses currently taking:</label>
+        <div id="coursesContainer">
+            <input type="text" class="course" name="courses[]" required>
+            <button type="button" onclick="addCourse()">Add Course</button>
+        </div><br><br>
+        
+        <label for="funnyThing">Funny thing?</label>
+        <textarea id="funnyThing" name="funnyThing"></textarea><br><br>
+        
+        <label for="anythingElse">Anything else?</label>
+        <textarea id="anythingElse" name="anythingElse"></textarea><br><br>
+        
+        <input type="checkbox" id="agree" name="agree" required>
+        <label for="agree">I understand that what is on this page is not password protected and I will not put anything here that I don’t want publicly available.</label><br><br>
+    </fieldset>
+    <input type="submit" value="Submit">
+    <input type="reset" value="Reset">
+</form>
+    </main>
+    <div data-include="components/footer.html"></div>
+    <script>
+        document.getElementById("validation_link_html").setAttribute("href","https://validator.w3.org/check?uri=" + location.href);
+             document.getElementById("validation_link_css").setAttribute("href","https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+    </script>
+    <script src="scripts/HTMLInclude.js"></script>
+    <script src="scripts/survey.js"></script>
+</body>
+</html>
