@@ -22,7 +22,7 @@
             <input type="text" id="mascot" placeholder="Beloved Axolotl" required><br><br>
 
             <label for="image">Image:</label>
-            <input type="file" id="image" accept="image/png, image/jpeg"required><br><br><br>
+            <input type="file" id="image" required><br><br><br>
 
             <label for="imageCaption">Image Caption:</label>
             <input type="text" id="imageCaption" placeholder="Anything you want" required><br><br>
@@ -56,8 +56,8 @@
             <label for="contract">"I understand that what is on this page is not password protected and I will not put anything here that I don’t want publicly available."</label>
             <input type="checkbox" id="contract" required><br><br>
     </fieldset>
-    <input type="submit" value="Submit">
-    <input type="reset" value="Reset">
+    <button type="submit" id="submitBtn">Submit</button>
+            <button type="reset" id="resetBtn">Reset</button>
 </form>
     </main>
     <div data-include="components/footer.html"></div>
