@@ -1,132 +1,137 @@
-body{
-    background-color:lavenderblush; 
+body {
+    background-color: lavenderblush;
     text-align: center;
-    color:rgb(8, 8, 8);;
+    color: rgb(8, 8, 8);
     font-family: Georgia;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 /*https://coolors.co/fff0f5-ffc5d0-f7d6d0-fb6090-821d30*/
-a{
-color:deeppink;
-text-decoration:none;
+a {
+    color: deeppink;
+    text-decoration: none;
 }
-a.hover{
-    color:lavenderblush;
-}
-main{
-    text-align: left;
-    margin-left: 20%;
-    margin-right: 20%;
-}
-h2, h3{
-    text-align: center;
-}
-img{
- width: 100%
-}
-figure{
-    text-align: center;
-    font-style:italic; 
-}
-p{
-    text-align: center;
-}
-nav{
-    font-size: 18px; 
-}
-.design {
-    font-size: 16.5px;
-}
-a:hover{
+
+a:hover {
     text-decoration: none;
     color: white;
 }
-footer{
-    margin-top: auto;
+
+main {
+    text-align: left;
+    margin: 0 auto; /* Centers the content horizontally */
+    max-width: 1200px; /* Adjust as needed */
+    width: 90%; /* Adjust percentage based on design requirements */
 }
-.intro{
+
+h2,
+h3,
+h1,
+figcaption {
+    text-align: center;
+}
+
+img {
+    width: 100%;
+}
+
+figure {
+    text-align: center;
+    font-style: italic;
+}
+
+p {
+    text-align: center;
+    font-size: 18px; /* Added font size for better readability */
+}
+
+nav {
+    font-size: 18px;
+}
+
+.design {
+    font-size: 16.5px;
+}
+
+footer {
+    margin-top: auto;
+    text-align: center;
+}
+
+.intro {
     list-style-type: circle;
 }
-<!--evaluations-->
+
 .crap {
     list-style-type: none;
-    font-size: .165in; 
-    margin-left: 35%;
-    margin-right: 40%;
+    font-size: 0.165in;
+    margin: 0 auto; /* Centers the content horizontally */
 }
-.letter{
-    font-size: .25in
+
+.letter {
+    font-size: 0.25in;
 }
-.web{
+
+.web {
     color: rgb(8, 8, 8);
     text-decoration: underline;
 }
-.good_bad{
+
+.good_bad {
     text-align: left;
 }
-p{
-    font-size: 18px;
-}
-<!--table-->
-table tr:nth-child(even) {
-    background-color:pink; 
-    color: black;
-}
-table tr:nth-child(odd){
-    background-color:ghostwhite;
-    color: black;
 
+/* Table */
+table tr:nth-child(even) {
+    background-color: pink;
+    color: black;
 }
-table, th, td, tr{
+
+table tr:nth-child(odd) {
+    background-color: ghostwhite;
+    color: black;
+}
+
+table,
+th,
+td,
+tr {
     border: 1.5px solid black;
     border-collapse: collapse;
     text-align: center;
     padding: 1px 4px 1px 4px;
 }
-h1, h2, h3, figcaption{
-    text-align: center;
+
+.table {
+    margin: 0 auto; /* Centers the content horizontally */
 }
-footer{
-    text-align: center;
-}
-.table{
-    margin-left: auto; 
-    margin-right: auto;
-}
-ol{
+
+ol {
     font-size: 20px;
 }
-nav{
-    font-size: 18px; 
-    text-align: center;
+
+/* Form */
+form {
+    padding: 10px;
 }
-.design {
-    font-size: 16.5px;
+
+.label,
+.input {
+    margin: 0 auto; /* Centers the content horizontally */
 }
-<!--form-->
-.design, footer{
-    text-align: center;
-}
-form{
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-label, input {
-    margin-left: auto;
-    margin-right: auto;
-}
-.divider{
+
+.divider {
     border: 5px double black;
 }
-.reset, .submit{
-   border: 2.5px solid hotpink;
+
+.reset,
+.submit {
+    border: 2.5px solid hotpink;
 }
-/*Laptop/small screens*/
-@media screen and ( min-width: 768px ) and ( max-width: 1024px ) {
+
+/* Laptop/small screens */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
     main {
         width: 90%;
     }
@@ -135,8 +140,8 @@ label, input {
     }
 }
 
-/*Tablet*/
-@media screen and ( min-width: 601px ) and ( max-width: 980px )  {
+/* Tablet */
+@media screen and (min-width: 601px) and (max-width: 980px) {
     main {
         width: 90%;
         font-size: 18px;
@@ -146,8 +151,8 @@ label, input {
     }
 }
 
-/*mobile*/
-@media screen and ( min-width: 370px ) and ( max-width: 600px ) {
+/* Mobile */
+@media screen and (min-width: 370px) and (max-width: 600px) {
     main {
         width: 85%;
         font-size: 16px;
