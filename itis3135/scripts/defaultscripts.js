@@ -25,7 +25,7 @@ displayDateTime();
 function submitInfo() {
     let userName = document.getElementById("userName").value;
     let userFeeling = document.getElementById("userFeeling").value;
-    let greetingMessage = "The Joyous Lion welcomes you, " + userName + "! We're glad you are feeling " + userFeeling + "!";
+    let greetingMessage = "The Beloved Axolotl welcomes you, " + userName + "! We're glad you are feeling " + userFeeling + "!";
     document.getElementById("greetingMessage").innerText = greetingMessage;
 }
 
