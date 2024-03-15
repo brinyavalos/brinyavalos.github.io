@@ -163,35 +163,41 @@ form {
 }
 
 .calculator {
-    width: 400px; 
+    width: 400px; /* Increased width */
     padding: 20px;
-    border: 2px solid #ccc;
+    border: 2px solid #ffc0cb; /* Pink border */
     border-radius: 10px;
-    text-align: center; 
+    text-align: center; /* Centering the content */
+    background-color: #fff0f5; /* Light pink background */
 }
 
 .calculator #display {
     width: calc(100% - 20px);
     margin-bottom: 10px;
     padding: 10px;
-    font-size: 24px;
+    font-size: 24px; /* Increased font size */
+    background-color: #fff; /* White display background */
+    border: 2px solid #ffc0cb; /* Pink border for display */
+    border-radius: 5px;
 }
 
 .calculator .buttons {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 12.5px;
+    gap: 10px;
 }
 
 .calculator button {
-    padding: 20px; 
-    font-size: 24px; 
+    padding: 20px; /* Increased padding */
+    font-size: 24px; /* Increased font size */
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    background-color: #fb6090; /* Pink button background */
+    color: #fff; /* White text color */
 }
 
 .calculator button:hover {
-    background-color: #f0f0f0;
+    background-color: #ff8cbb; /* Lighter pink on hover */
 }
