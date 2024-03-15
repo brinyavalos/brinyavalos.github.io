@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brittany Avalos-Ortiz's Beloved Axolotl《♡》 ITIS 3135《♡》 Contract</title>
+    <link rel="icon" type="image/png" href="images/axolotl.png">
+    <link rel="stylesheet" href="styles/default.css"> 
+</head>
+<body>
+    <div data-include="components/header.html"></div>
+    <main>
+        <h2>Salary Management System</h2>
+        <p>Name: <input type="text" id="nameInput"></p>
+        <p>Salary: <input type="text" id="salaryInput"></p>
+        <button onclick="addSalary()">Add</button>
+        <br><br>
+        <div>
+            <h3>Employees</h3>
+            <div id="employeeRadioButtons"></div>
+        </div>
+        <p>New Salary: <input type="text" id="newSalaryInput"></p>
+        <button onclick="modifySalary()">Modify</button>
+        <br><br>
+        <div id="results"></div>
+        <table id="results_table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Salary</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </main>
+    <div data-include="components/footer.html"></div>
+    <script>
+        document.getElementById("validation_link_html").setAttribute("href","https://validator.w3.org/check?uri=" + location.href);
+        document.getElementById("validation_link_css").setAttribute("href","https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+    </script>
+    <script src="scripts/HTMLInclude.js"></script>
+    <script src="scripts/script.js"></script>
+</body>
+</html>
+
