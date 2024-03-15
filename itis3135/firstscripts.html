@@ -18,13 +18,20 @@
         <input type="text" id="userFeeling"><br>
         <button onclick="submitInfo()">Submit</button><br>
         <p id="greetingMessage"></p>
-        <label for="favNumber">Enter your favorite number (0-10):</label>
-        <input type="number" id="favNumber" min="0" max="10"><br>
-        <button onclick="findPolygon()">Find Polygon Name</button><br>
-        <button onclick="randomSock()">Generate a Random Sock</button>
-        <button onclick="displaySubscriptions()">Subscription Options</button>
-        <button onclick="calculateTax()">Price After Tax</button>
-        <button onclick="provideInsult()">Click Here For Fun</button>
+        <div class="container">
+            <h4>Welcome to the Beloved Axolotl Company!</h4>
+            <label for="favoriteNumber">Enter your favorite number(1-10):</label>
+            <input type="number" id="favoriteNumber" min="0" max="10">
+            <button onclick="findPolygon()">Find Polygon</button>
+            <p id="output"></p>
+            <div class="buttons">
+                <button onclick="generateCompliment()">Compliment Generator</button><br>
+                <button onclick="translateToAxolotl()">Axolotl Translator</button><br>
+                <button onclick="startDanceParty()">Axolotl Dance Party</button><br>
+                <button onclick="predictFuture()">Axolotl Fortune Teller</button><br>
+            </div>
+            <p id="output"></p>
+        </div>
     </main>
     <div data-include="components/footer.html"></div>
     <script>

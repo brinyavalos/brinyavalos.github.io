@@ -29,83 +29,61 @@ function submitInfo() {
     document.getElementById("greetingMessage").innerText = greetingMessage;
 }
 
+function generateCompliment() {
+    const compliments = [
+        "You are as cute as an axolotl!",
+        "Your smile is as radiant as an axolotl's!",
+        "You have the charm of an axolotl!",
+        "Your intelligence rivals that of an axolotl!",
+        "You are as unique as an axolotl's regenerative abilities!"
+    ];
+    const randomIndex = Math.floor(Math.random() * compliments.length);
+    const compliment = compliments[randomIndex];
+    document.getElementById("output").innerText = compliment;
+}
+
+function translateToAxolotl() {
+    const userInput = prompt("Enter a message to translate into Axolotl language:");
+    const axolotlTranslation = userInput.replace(/[aeiou]/gi, 'axolotl');
+    document.getElementById("output").innerText = axolotlTranslation;
+}
+
+function startDanceParty() {
+    alert("Let's get the axolotl dance party started!");
+}
+
+function predictFuture() {
+    const fortunes = [
+        "You will find joy in unexpected places, just like an axolotl exploring its habitat!",
+        "Good fortune will come your way, guided by the spirit of the axolotl!",
+        "Your dreams will be fulfilled, with the persistence of an axolotl regenerating its limbs!"
+    ];
+    const randomIndex = Math.floor(Math.random() * fortunes.length);
+    const fortune = fortunes[randomIndex];
+    document.getElementById("output").innerText = fortune;
+}
 function findPolygon() {
-    let favNumber = Math.abs(Math.round(parseFloat(document.getElementById("favNumber").value)));
-    let polygons = ["Monogon", "Digon", "Trigon", "Tetragon", "Pentagon", "Hexagon", "Heptagon", "Octagon", "Nonagon", "Decagon"];
-    let polygonName = polygons[favNumber - 1];
+    const favoriteNumber = Math.abs(Math.round(parseFloat(document.getElementById("favoriteNumber").value)));
+    const polygons = [
+        { sides: 1, name: "henagon" },
+        { sides: 2, name: "digon" },
+        { sides: 3, name: "triangle" },
+        { sides: 4, name: "quadrilateral" },
+        { sides: 5, name: "pentagon" },
+        { sides: 6, name: "hexagon" },
+        { sides: 7, name: "heptagon" },
+        { sides: 8, name: "octagon" },
+        { sides: 9, name: "nonagon" },
+        { sides: 10, name: "decagon" },
+    ];
 
-    if (polygonName) {
-        alert("The polygon with " + favNumber + " sides is called a " + polygonName + ".");
-    } else {
-        alert("No polygon found with " + favNumber + " sides.");
-    }
-}
-
-function sockRandomizer() {
-    const colors = ["Red", "Blue", "Green", "Yellow", "Purple", "Orange"];
-    const patterns = ["Striped", "Polka Dot", "Argyle", "Solid", "Geometric", "Abstract"];
-    const materials = ["Cotton", "Wool", "Silk", "Bamboo", "Polyester", "Merino Wool"];
-    const lengths = ["Ankle", "Crew", "Knee-High"];
-
-    const randomColorIndex = Math.floor(Math.random() * colors.length);
-    const randomPatternIndex = Math.floor(Math.random() * patterns.length);
-    const randomMaterialIndex = Math.floor(Math.random() * materials.length);
-    const randomLengthIndex = Math.floor(Math.random() * lengths.length);
-
-    const randomColor = colors[randomColorIndex];
-    const randomPattern = patterns[randomPatternIndex];
-    const randomMaterial = materials[randomMaterialIndex];
-    const randomLength = lengths[randomLengthIndex];
-
-    const sockRecommendation = {
-        color: randomColor,
-        pattern: randomPattern,
-        material: randomMaterial,
-        length: randomLength
-    };
-
-    return sockRecommendation;
-}
-
-function randomSock() {
-    const randomSock = sockRandomizer();
-    alert("Random Sock Recommendation: \nColor: " + randomSock.color + "\nPattern: " + randomSock.pattern + "\nMaterial: " + randomSock.material + "\nLength: " + randomSock.length);
-}
-
-const subscriptionPrices = {
-    "1 Month": "$10",
-    "3 Months": "$25",
-    "6 Months": "$45",
-    "12 Months": "$80"
-};
-
-function displaySubscriptions() {
-    let message = "Subscription Prices:\n";
-
-    for (const duration in subscriptionPrices) {
-        message += duration + ": " + subscriptionPrices[duration] + "\n";
+    let polygonName = "polygon";
+    for (let i = 0; i < polygons.length; i++) {
+        if (favoriteNumber === polygons[i].sides) {
+            polygonName = polygons[i].name;
+            break;
+        }
     }
 
-    alert(message);
-}
-
-function calculateTax() {
-    let message = "After Tax:\n";
-
-    for (const duration in subscriptionPrices) {
-        let price = parseFloat(subscriptionPrices[duration].replace('$', ''));
-        let totalPrice = price * 1.07;
-        message += duration + ": $" + totalPrice.toFixed(2) + "\n";
-    }
-
-    alert(message);
-}
-
-function provideInsult() {
-    const insults = ["Ugly", "Stupid", "Silly", "Funny-Looking", "Goofy"];
-    const randomInsultIndex = Math.floor(Math.random() * insults.length);
-    const randomInsult = insults[randomInsultIndex];
-
-    let message = "Your Socks are " + randomInsult + "! Buy a better pair from us!";
-    alert(message);
+    alert(`The polygon with ${favoriteNumber} sides is called a ${polygonName}.`);
 }
