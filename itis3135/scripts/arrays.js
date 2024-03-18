@@ -2,82 +2,61 @@ let persons = [];
 let salaries = [];
 
 function addSalary() {
-    let name = document.getElementById("nameInput").value.trim();
-    let salary = document.getElementById("salaryInput").value.trim();
+  const personName = document.getElementById('personName').value.trim();
+  const salary = parseFloat(document.getElementById('salary').value.trim());
 
-    if (name === "" || isNaN(salary)) {
-        alert("Please enter valid name and numeric salary.");
-        return;
-    }
+  if (!personName || isNaN(salary)) {
+    alert("Please enter valid name and numeric salary.");
+    return;
+  }
 
-    persons.push(name);
-    salaries.push(parseInt(salary));
+  persons.push(personName);
+  salaries.push(salary);
 
-    document.getElementById("nameInput").value = "";
-    document.getElementById("salaryInput").value = "";
+  document.getElementById('personName').value = '';
+  document.getElementById('salary').value = '';
 
-    displaySalary();
-    displayEmployeeDropdown();
-    document.getElementById("nameInput").focus();
+  displaySalary();
+  displayResults();
+
+  document.getElementById('personName').focus();
 }
 
 function modifySalary() {
-    let selectedIndex = document.getElementById("employeeSelect").selectedIndex;
-    if (selectedIndex === -1) {
-        alert("Please select an employee to modify.");
-        return;
-    }
-
-    let newName = persons[selectedIndex];
-    let newSalary = parseInt(document.getElementById("newSalaryInput").value.trim());
-
-    if (isNaN(newSalary)) {
-        alert("Please enter a numeric salary.");
-        return;
-    }
-
-    salaries[selectedIndex] = newSalary;
-
-    displaySalary();
-    document.getElementById("newSalaryInput").value = "";
-}
-
-function displayEmployeeDropdown() {
-    let selectElement = document.getElementById("employeeSelect");
-    selectElement.innerHTML = "";
-
-    persons.forEach(function (person) {
-        let option = document.createElement("option");
-        option.text = person;
-        selectElement.add(option);
-    });
+  // Implementation for modifying salary
 }
 
 function displayResults() {
-    let totalSalary = salaries.reduce((acc, curr) => acc + curr, 0);
-    let averageSalary = totalSalary / salaries.length;
-    let highestSalary = Math.max(...salaries);
+  const averageSalary = calculateAverage(salaries);
+  const highestSalary = Math.max(...salaries);
 
-    let resultsDiv = document.getElementById("results");
-    resultsDiv.innerHTML = "";
-    resultsDiv.innerHTML += "<h2>Results</h2>";
-    resultsDiv.innerHTML += "<p>Average Salary: " + averageSalary.toFixed(2) + "</p>";
-    resultsDiv.innerHTML += "<p>Highest Salary: " + highestSalary + "</p>";
+  const resultsDiv = document.getElementById('results');
+  resultsDiv.innerHTML = `
+    <h3>Results</h3>
+    <p>Average Salary: ${averageSalary}</p>
+    <p>Highest Salary: ${highestSalary}</p>
+  `;
+}
+
+function calculateAverage(arr) {
+  const total = arr.reduce((acc, curr) => acc + curr, 0);
+  return total / arr.length;
 }
 
 function displaySalary() {
-    let table = document.getElementById("results_table");
-    table.innerHTML = "<tr><th>Name</th><th>Salary</th></tr>";
+  const tableBody = document.querySelector('#results_table tbody');
+  tableBody.innerHTML = '';
 
-    for (let i = 0; i < persons.length; i++) {
-        let row = table.insertRow(-1);
-        let cell1 = row.insertCell(0);
-        let cell2 = row.insertCell(1);
-        cell1.textContent = persons[i];
-        cell2.textContent = salaries[i];
-    }
-
-    displayResults();
+  for (let i = 0; i < persons.length; i++) {
+    const row = tableBody.insertRow();
+    const cell1 = row.insertCell(0);
+    const cell2 = row.insertCell(1);
+    cell1.textContent = persons[i];
+    cell2.textContent = salaries[i];
+  }
 }
 
-document.getElementById("nameInput").focus();
+document.getElementById('addButton').addEventListener('click', addSalary);
+document.getElementById('modifyButton').addEventListener('click', modifySalary);
+
+document.getElementById('personName').focus(); // Move cursor to name field initially
