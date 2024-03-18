@@ -1,72 +1,84 @@
+// Declare empty arrays
 let persons = [];
 let salaries = [];
 
+// Function to add a person and salary to the arrays
 function addSalary() {
-  const personName = document.getElementById('personName').value.trim();
-  const salary = parseFloat(document.getElementById('salary').value.trim());
+    const nameInput = document.getElementById("name").value.trim();
+    const salaryInput = document.getElementById("salary").value.trim();
 
-  if (!personName || isNaN(salary)) {
-    alert("Please enter valid name and numeric salary.");
-    return;
-  }
-
-  persons.push(personName);
-  salaries.push(salary);
-
-  document.getElementById('personName').value = '';
-  document.getElementById('salary').value = '';
-
-  displaySalary();
-  displayResults();
-
-  document.getElementById('personName').focus();
-}
-
-function modifySalary() {
-    let index = document.getElementById("namesArray").selectedIndex;
-    let newSalary = parseFloat(document.getElementById("modifyButton").value.trim());
-
-    if (index === -1 || isNaN(newSalary) || newSalary === "") {
-        alert("Please select an employee and enter a valid salary.");
+    // Data validation
+    if (nameInput === "" || salaryInput === "" || isNaN(parseFloat(salaryInput))) {
+        alert("Please enter valid name and numeric salary.");
         return;
     }
 
-    salaries[index] = newSalary;
+    // Add to arrays
+    persons.push(nameInput);
+    salaries.push(parseFloat(salaryInput));
 
-    document.getElementById("modifyButton").value = "";
+    // Move cursor to name field
+    document.getElementById("name").focus();
 }
 
+// Function to modify the salary of an employee
+function modifySalary() {
+    const selectedEmployee = document.getElementById("employeeDropdown").value;
+    const newSalary = document.getElementById("newSalary").value.trim();
+
+    // Data validation
+    if (selectedEmployee === "" || newSalary === "" || isNaN(parseFloat(newSalary))) {
+        alert("Please select an employee and enter valid numeric salary.");
+        return;
+    }
+
+    // Find index of selected employee
+    const index = persons.indexOf(selectedEmployee);
+    if (index !== -1) {
+        // Update salary
+        salaries[index] = parseFloat(newSalary);
+    } else {
+        alert("Employee not found.");
+    }
+
+    // Move cursor to name field
+    document.getElementById("name").focus();
+}
+
+// Function to display average and highest salary
 function displayResults() {
-  const averageSalary = calculateAverage(salaries);
-  const highestSalary = Math.max(...salaries);
+    const averageSalary = salaries.reduce((total, salary) => total + salary, 0) / salaries.length;
+    const highestSalary = Math.max(...salaries);
 
-  const resultsDiv = document.getElementById('results');
-  resultsDiv.innerHTML = `
-    <h3>Results</h3>
-    <p>Average Salary: ${averageSalary}</p>
-    <p>Highest Salary: ${highestSalary}</p>
-  `;
+    // Display results
+    document.getElementById("results").innerHTML = `
+        <h2>Results</h2>
+        <p>Average Salary: ${averageSalary.toFixed(2)}</p>
+        <p>Highest Salary: ${highestSalary.toFixed(2)}</p>
+    `;
 }
 
-function calculateAverage(arr) {
-  const total = arr.reduce((acc, curr) => acc + curr, 0);
-  return total / arr.length;
-}
-
+// Function to display names and salaries in a table
 function displaySalary() {
-  const tableBody = document.querySelector('#results_table tbody');
-  tableBody.innerHTML = '';
-
-  for (let i = 0; i < persons.length; i++) {
-    const row = tableBody.insertRow();
-    const cell1 = row.insertCell(0);
-    const cell2 = row.insertCell(1);
-    cell1.textContent = persons[i];
-    cell2.textContent = salaries[i];
-  }
+    const table = document.getElementById("results-table");
+    table.innerHTML = `
+        <tr>
+            <th>Name</th>
+            <th>Salary</th>
+        </tr>
+    `;
+    for (let i = 0; i < persons.length; i++) {
+        table.innerHTML += `
+            <tr>
+                <td>${persons[i]}</td>
+                <td>${salaries[i]}</td>
+            </tr>
+        `;
+    }
 }
 
-document.getElementById('addButton').addEventListener('click', addSalary);
-document.getElementById('modifyButton').addEventListener('click', modifySalary);
-
-document.getElementById('personName').focus(); // Move cursor to name field initially
+// Initial setup
+document.addEventListener("DOMContentLoaded", function () {
+    // Move cursor to name field
+    document.getElementById("name").focus();
+});

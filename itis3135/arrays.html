@@ -10,29 +10,29 @@
 <body>
     <div data-include="components/header.html"></div>
     <main>
-        <h1>Salary Management System</h1>
-        <form id="salaryForm">
-          <label for="personName">Person Name:</label>
-          <input type="text" id="personName" required><br><br>
-          <label for="salary">Salary:</label>
-          <input type="number" id="salary" required><br><br>
-          <button type="button" id="addButton">Add Salary</button>
-          <button type="button" id="modifyButton">Modify Salary</button>
-        </form>
-        
-        <h2>Results</h2>
-        <div id="results"></div>
+      <hr>
+      <label for="name">Name:</label>
+      <input type="text" id="name" placeholder="Enter name">
+      <label for="salary">Salary:</label>
+      <input type="number" id="salary" placeholder="Enter salary"><br><br>
+      <button onclick="addSalary()">Add Salary</button>
+    <hr>
+      <label for="employeeDropdown">Select Employee:</label>
+      <select id="employeeDropdown"></select>
+      <label for="newSalary">New Salary:</label>
+      <input type="number" id="newSalary" placeholder="Enter new salary"><br>
+      <button onclick="modifySalary()">Modify Salary</button>
+      <hr>
+      <button onclick="displayResults()">Display Results</button>
+      <button onclick="displaySalary()">Display Salary</button>
+      <div id="results"></div>
       
-        <h2>Salary Table</h2>
-        <table id="results_table">
-          <thead>
-            <tr>
-              <th>Person</th>
-              <th>Salary</th>
-            </tr>
-          </thead>
-          <tbody></tbody>
-        </table>
+      
+      
+      <table id="results-table">
+          
+      </table>
+      
     </main>
     <div data-include="components/footer.html"></div>
     <script>
