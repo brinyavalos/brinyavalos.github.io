@@ -240,3 +240,8 @@ form {
     border: none;
     border-radius: 3px;
 }
+
+#results-table {
+    margin: 0 auto;
+    background-color: #fb6090;
+}
