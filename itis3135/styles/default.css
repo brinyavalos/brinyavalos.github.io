@@ -47,7 +47,7 @@ p {
 }
 
 nav {
-    font-size: 14.8px;
+    font-size: 15px;
 }
 
 .design {
@@ -240,36 +240,3 @@ form {
     border: none;
     border-radius: 3px;
 }
-
-#results {
-    background-color: #f0f0f0;
-    padding: 10px;
-    margin-top: 20px;
-    border-radius: 5px;
-}
-#results {
-    background-color: white;
-    padding: 10px;
-    border-radius: 5px;
-    margin-bottom: 20px;
-  }
-  
-  #results_table {
-    width: 100%;
-    border-collapse: collapse;
-  }
-  
-  #results_table th,
-  #results_table td {
-    border: 1px solid black;
-    padding: 8px;
-  }
-  
-  #results_table th {
-    background-color: #ff4081;
-    color: white;
-  }
-  
-  #results_table tbody tr:nth-child(even) {
-    background-color: #ffc1e3;
-  }
