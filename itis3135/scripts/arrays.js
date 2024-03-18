@@ -23,19 +23,17 @@ function addSalary() {
 }
 
 function modifySalary() {
-    const selectPerson = document.getElementById('selectPerson');
-    const selectedPersonIndex = selectPerson.selectedIndex;
-    const newSalary = parseFloat(document.getElementById('newSalary').value.trim());
-  
-    if (selectedPersonIndex === -1 || isNaN(newSalary)) {
-      alert("Please select a person and enter a valid numeric salary.");
-      return;
+    let index = document.getElementById("namesArray").selectedIndex;
+    let newSalary = parseFloat(document.getElementById("modifyButton").value.trim());
+
+    if (index === -1 || isNaN(newSalary) || newSalary === "") {
+        alert("Please select an employee and enter a valid salary.");
+        return;
     }
-  
-    salaries[selectedPersonIndex] = newSalary;
-  
-    displaySalary();
-    displayResults();
+
+    salaries[index] = newSalary;
+
+    document.getElementById("modifyButton").value = "";
 }
 
 function displayResults() {
