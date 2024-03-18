@@ -23,23 +23,27 @@ function addSalary() {
 
 // Function to modify the salary of an employee
 function modifySalary() {
-    const selectedEmployee = document.getElementById("employeeDropdown").value;
-    const newSalary = document.getElementById("newSalary").value.trim();
+    const dropdown = document.getElementById('employeeDropdown');
+    const selectedIndex = dropdown.selectedIndex;
+    const selectedEmployee = persons[selectedIndex];
 
-    // Data validation
-    if (selectedEmployee === "" || newSalary === "" || isNaN(parseFloat(newSalary))) {
-        alert("Please select an employee and enter valid numeric salary.");
+    const newSalaryInput = document.getElementById('newSalary');
+    const newSalary = parseFloat(newSalaryInput.value.trim());
+
+    if (isNaN(newSalary)) {
+        alert('Please enter a valid salary.');
         return;
     }
 
-    // Find index of selected employee
     const index = persons.indexOf(selectedEmployee);
     if (index !== -1) {
-        // Update salary
-        salaries[index] = parseFloat(newSalary);
+        salaries[index] = newSalary;
+        alert(`Modified ${selectedEmployee}'s salary to $${newSalary}.`);
     } else {
-        alert("Employee not found.");
+        alert('Employee not found.');
     }
+
+    newSalaryInput.value = '';
 
     // Move cursor to name field
     document.getElementById("name").focus();
