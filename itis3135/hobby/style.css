@@ -19,7 +19,7 @@ nav{
 }
 .navbar{
     color: #ffffff;
-    background: rgba(0, 0, 0, 0.6) !important;
+    background: rgba(122, 84, 52, 0.68) !important;
     margin-bottom:0;
 }
 h1 {
@@ -31,7 +31,7 @@ h1 {
 }
 
 .home-detail {
-    background-image: url(../hobby/images/craiyon_cave1.png); 
+    background-image: url(../hobby/images/Screenshot\ 2024-03-19\ 014156.png); 
     background-size:cover;
     height: 100vh;
     display: flex;
