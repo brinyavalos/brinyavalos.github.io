@@ -1,29 +1,36 @@
 body {
+    background-color: antiquewhite;
     overflow-x: hidden;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    font-family: "Lato", sans-serif; 
 }
 
 a:hover, a {
-    text-decoration: underline;
-    color: black;
+    text-decoration: none;
+    color: white;
 }
 
-nav {
+nav{
     text-align: right;
     font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.001rem;
-    display: inline-flex;
+    text-transform:uppercase;
+    letter-spacing: 0.1rem;
+    padding-top: .8rem;
+    padding-bottom: .8rem;
 }
-
+.navbar{
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.6) !important;
+    margin-bottom:0;
+}
 h1 {
     text-align: center;
     font-size: 50px;
     padding-bottom: 0;
+    color: white;
 }
 
 .home-detail {
-    background-image: url(itis3135/hobby/images/craiyon_cave1.png); /* Adjust the path accordingly */
-    background-size: cover;
-    height: 30px; /* Adjust the height as needed */
+    background-image: url(../hobby/images/craiyon_cave1.png); 
+    background-size:contain;
+    margin-top: 0;
 }
