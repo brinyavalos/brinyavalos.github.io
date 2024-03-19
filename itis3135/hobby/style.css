@@ -1,0 +1,29 @@
+body {
+    overflow-x: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+}
+
+a:hover, a {
+    text-decoration: underline;
+    color: black;
+}
+
+nav {
+    text-align: right;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.001rem;
+    display: inline-flex;
+}
+
+h1 {
+    text-align: center;
+    font-size: 50px;
+    padding-bottom: 0;
+}
+
+.home-detail {
+    background-image: url(itis3135/hobby/images/craiyon_cave1.png); /* Adjust the path accordingly */
+    background-size: cover;
+    height: 30px; /* Adjust the height as needed */
+}
