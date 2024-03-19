@@ -31,14 +31,7 @@ h1 {
 }
 
 .home-detail {
-    background-image: url(../hobby/images/Screenshot\ 2024-03-19\ 014156.png); 
-    background-size:cover;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    padding: 0;
+    background-image: url(../hobby/images/Screenshot\ 2024-03-19\ 014156.png);
 }
 
 
