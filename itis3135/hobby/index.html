@@ -12,6 +12,7 @@
                 background-color: #3b5998; /* Facebook Blue */
                 margin: 0;
                 padding: 0;
+                font-size: 18px;
             }
         
             h1, h2, h3, h4, h5, h6 {
@@ -111,19 +112,19 @@
             <h1>Astrophotography</h1>
             <!-- start of navigation bar-->
             <nav class="navbar">
-                    <a href="#what">Home</a>
+                    <a id="whatLink">Home</a>
                     ☆
-                    <a href="#who" onclick="showSection('who')">Purpose</a>
+                    <a id="whoLink">Purpose</a>
                     ☆
-                    <a href="#when" onclick="showSection('when')">Best Times</a>
+                    <a id="whenLink">Best Times</a>
                     ☆
-                    <a href="#where" onclick="showSection('where')">Best Locations</a>
+                    <a id="whereLink">Best Locations</a>
                     ☆
-                    <a href="#how"onclick="showSection('how')">How to Start</a>
+                    <a id="howLink">How to Start</a>
                     ☆
-                    <a href="#why" onclick="showSection('why')">Why Start</a>
+                    <a id="whyLink">Why Start</a>
                     ☆
-                    <a href="#prompts" onclick="showSection('prompts')">AI Prompts</a>
+                    <a id="promptsLink">AI Prompts</a>
             </nav>
              <!--end of navigation-->
         </header>
@@ -389,16 +390,56 @@
         </div>
         </footer>
         <script>
-            function showSection(sectionId) {
-            var sections = document.querySelectorAll('section');
-            sections.forEach(function(section) {
-                if (section.id === sectionId) {
-                    section.style.display = 'block';
-                } else {
-                    section.style.display = 'none';
+            let whatlink = document.getElementById('whatlink');
+            let wholink = document.getElementById('wholink');
+            let whenlink = document.getElementById('whenlink');
+            let wherelink = document.getElementById('wherelink');
+            let howlink = document.getElementById('howlink');
+            let whylink = document.getElementById('whylink');
+            let ailink = document.getElementById('promptsLink');
+    
+            let what = document.getElementById('what');
+            let who = document.getElementById('who');
+            let when = document.getElementById('when');
+            let where = document.getElementById('where');
+            let how = document.getElementById('how');
+            let why = document.getElementById('why');
+            let ai = document.getElementById('pprompts');
+    
+            let pages = [what, who, when, where, how, why, prompts]
+    
+            whatlink.addEventListener('click', function() {newPage(0)});
+            wholink.addEventListener('click', function() {newPage(1)});
+            whenlink.addEventListener('click', function() {newPage(2)});
+            wherelink.addEventListener('click', function() {newPage(3)});
+            howlink.addEventListener('click', function() {newPage(4)});
+            whylink.addEventListener('click', function() {newPage(5)});
+            ailink.addEventListener('click', function() {newPage(6)});
+    
+            window.onload = loadPage()
+    
+            function loadPage(){
+                for(let i = 0; i < pages.length; i++){
+                    if (i == 0){
+                        pages[i].style.display = "block";
+                    }
+                    else{
+                        pages[i].style.display = "none";
+                    }
                 }
-            });
-        }
+            }
+    
+            function newPage(index){
+                for(let i = 0; i < pages.length; i++){
+                    if (i == index){
+                        pages[i].style.display = "block";
+                    }
+                    else
+                    {
+                        pages[i].style.display = "none";
+                    }
+                }
+            }
         </script>
     </body>
 </html>
