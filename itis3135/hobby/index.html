@@ -102,31 +102,61 @@
             }
             #low {
                 font-size: 12px;
-            }
-            /* CSS for shining stars */
-            .shining-star {
-                position: absolute;
-                width: 1px;
-                height: 1px;
-                background-color: #fff; /* Color of the stars */
-                opacity: 0; /* Start with zero opacity */
-                animation: shine 2s infinite; /* Animation effect */
+            } 
+            /* Shooting star animation */
+            @keyframes shooting-star-top-left {
+                0% { right: 100%; top: 0; }
+                100% { right: 0%; top: 100%; }
             }
 
-            /* Animation keyframes for shining stars */
-            @keyframes shine {
-                0% {
-                    opacity: 0;
-                    transform: scale(1);
-                }
-                50% {
-                    opacity: 1;
-                    transform: scale(1.5);
-                }
-                100% {
-                    opacity: 0;
-                    transform: scale(1);
-                }
+            @keyframes shooting-star-top-right {
+                0% { left: 100%; top: 0; }
+                100% { left: 0%; top: 100%; }
+            }
+
+            @keyframes shooting-star-bottom-left {
+                0% { right: 100%; bottom: 0; }
+                100% { right: 0%; bottom: 100%; }
+            }
+
+            @keyframes shooting-star-bottom-right {
+                0% { left: 100%; bottom: 0; }
+                100% { left: 0%; bottom: 100%; }
+            }
+
+            .shooting-star {
+                position: absolute;
+                width: 20px;
+                height: 20px;
+                clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+                background-color: #ffffff;
+                animation-duration: 5s; /* Adjust animation duration */
+                animation-iteration-count: infinite;
+            }
+
+            /* Individual shooting stars */
+            #star1 {
+                top: 10%;
+                right: 0%;
+                animation-name: shooting-star-top-left;
+            }
+
+            #star2 {
+                top: 10%;
+                left: 0%;
+                animation-name: shooting-star-top-right;
+            }
+
+            #star3 {
+                bottom: 10%;
+                right: 0%;
+                animation-name: shooting-star-bottom-left;
+            }
+
+            #star4 {
+                bottom: 10%;
+                left: 0%;
+                animation-name: shooting-star-bottom-right;
             }
         </style>
     </head>
@@ -144,7 +174,7 @@
                     ☆
                     <a href="#where">Best Locations</a>
                     ☆
-                    <a ihref="#how">How to Start</a>
+                    <a href="#how">How to Start</a>
                     ☆
                     <a href="#why">Why Start</a>
                     ☆
@@ -166,8 +196,11 @@
                     galaxies, etc using a special type of photography equipment. It combines elements of photography and astronomy, 
                     which requires patience and skill to produce stunning images of the night sky. Enthusiasts use long exposure techniques and
                      often travel to remote locations to minimize light pollution and capture the beauty of the cosmos. </p>
-                <!-- Shining stars container -->
-                <div id="shining-stars-container"></div>
+                     <div id="star1" class="shooting-star"></div>
+                     <div id="star2" class="shooting-star"></div>
+                     <div id="star3" class="shooting-star"></div>
+                     <div id="star4" class="shooting-star"></div>
+                     
             </section>
             
             <!--beginning of who-->
@@ -407,9 +440,40 @@
             <section id="prompts">
                 <h2>AI Prompts</h2>
                 <fieldset>
+                    <legend>Overall</legend>
                 <p>For the Image portion of this assignment, I used <i>Copilot</i> in order to generate the Images regarding my hobby. Every Image has a caption with label prompt that was used to create the image. <br>
-                    For the Coding portion of this assignment, I used <i>ChatGPT</i> in order to generate a random hobby as well as information for my hobby. 
+                    For the Coding portion of this assignment, I used <i>ChatGPT</i> in order to generate a random hobby as well as information for my hobby and some of the code. 
                 </p>
+                </fieldset>
+                <fieldset>
+                    <legend><strong>CSS</strong></legend>
+                    <h3>Prompt:</h3>
+                    <p>"create an embedded css style that uses the CRAP rules with #210535, #430d4dd, #7b337d, #c874b2, #f5d5e0 colors" </p>
+                </fieldset>
+                <fieldset>
+                    <legend><strong>Instructions</strong></legend>
+                    <h3>Prompt:</h3>
+                    <p>"Dumb down the following instructions: ..."</p>
+                    <p>I provided the instructions from canvas and the ai wrote a bullet point verison. dont judge me.</p>
+                </fieldset>
+                <fieldset>
+                    <legend><strong>Hobby</strong></legend>
+                    <h3>Prompt:</h3>
+                    <p>"generate a random hobby". <br> This is how I picked my hobby.</p>
+                </fieldset>
+                <fieldset>
+                    <legend><strong>Information</strong></legend>
+                    <h3>Prompt:</h3>
+                    <p>"What is Astrophotography", <br>
+                    "Purpose of astrophotography", <br>
+                    "best locations to go astrophotographing", <br>
+                    "a list on why someone should start astrophotography", <br>
+                    "explain how someone could start astrophotography in a list "
+                </p>
+                    <legend><strong>EXTRA!!</strong></legend>
+                    <h3>Prompt:</h3>
+                    <p>I created the "shooting stars" with the help of ai</p>
+                    <p>only show the css to make multiple star shaped shooting stars that go in different directions</p>
                 </fieldset>
             </section>
         </main>
@@ -445,30 +509,16 @@
             
             showSection('what'); //shows home by default
         });
-        // Function to generate a random position on the page
-function randomPosition() {
-    var position = {
-        top: Math.random() * window.innerHeight + 'px',
-        left: Math.random() * window.innerWidth + 'px'
-    };
-    return position;
-}
+        document.addEventListener('DOMContentLoaded', function() {
+        // Get all star elements
+        var stars = document.querySelectorAll('.star');
 
-// Function to create a shining star element
-function createShiningStar() {
-    var star = document.createElement('div');
-    star.className = 'shining-star';
-    var position = randomPosition();
-    star.style.top = position.top;
-    star.style.left = position.left;
-    document.getElementById('shining-stars-container').appendChild(star);
-}
+        // Get a random index
+        var randomIndex = Math.floor(Math.random() * stars.length);
 
-// Create three shining stars
-for (var i = 0; i < 3; i++) {
-    createShiningStar();
-}
-
+        // Show the randomly selected star
+        stars[randomIndex].style.display = 'block';
+    }); 
         </script>
     </body>
 </html>
