@@ -7,46 +7,50 @@
         <link rel="icon" type="image/png" href="images/camera.png">
         <style>
             body {
-                font-family: Georgia;
-                color: #ffffff; /* Contrast: light text on dark background */
-                background-color: #3b5998; /* Facebook Blue */
+                font-family: Arial, sans-serif;
+                color: #210535; /* Contrast: Dark text on light background */
+                background-color: #f5d5e0; /* Contrast: Light background */
                 margin: 0;
                 padding: 0;
-                font-size: 18px;
             }
         
             h1, h2, h3, h4, h5, h6 {
-                color: #ff6b6b; /* Red for emphasis */
+                color: #7b337d; /* Emphasis: Purple color */
                 text-align: center;
                 margin-top: 20px;
             }
         
             p {
                 margin: 10px 0;
+                color: #430d4d; /* Content: Dark purple text */
             }
         
             a {
-                color: #d1d1d1; /* Light gray for links */
-                text-decoration: underline;
-            }
-        
-            .navbar {
-                text-align: center;
-                padding: 10px;
-                background-color: #ff6b6b; /* Red */
-            }
-        
-            .navbar a {
-                margin: 0 10px;
-                padding: 5px 15px;
-                border-radius: 20px;
-                background-color: #61dafb; /* Blue */
-                color: #ffffff;
+                color: #430d4d; /* Links: Dark purple */
                 text-decoration: none;
             }
         
-            .navbar a:hover {
-                background-color: rgb(253, 138, 255); /* pink on hover */
+            a:hover {
+                text-decoration: underline;
+            }
+        
+            nav.navbar {
+                text-align: center;
+                padding: 10px;
+                background-color: #c874b2; /* Navigation: Pink background */
+            }
+        
+            nav.navbar a {
+                margin: 0 10px;
+                padding: 5px 15px;
+                border-radius: 20px;
+                background-color: #7b337d; /* Navigation Links: Purple background */
+                color: #f5d5e0; /* Navigation Links: Light text */
+                text-decoration: none;
+            }
+        
+            nav.navbar a:hover {
+                background-color: #210535; /* Hover: Darker background */
             }
         
             main {
@@ -64,7 +68,7 @@
             }
         
             figcaption {
-                color: #d1d1d1; /* Light gray */
+                color: #210535; /* Caption: Dark text */
             }
         
             ul {
@@ -73,15 +77,13 @@
         
             footer {
                 text-align: center;
-                background-color: #3b5998; /* Facebook Blue */
+                background-color: #c874b2; /* Footer: Pink background */
                 padding: 10px 0;
-                position: fixed;
-                bottom: 0;
-                width: 100%;
             }
         
             footer p {
                 margin: 0;
+                color: #210535; /* Footer Text: Dark text */
             }
         
             .validation-buttons {
@@ -98,6 +100,12 @@
                 margin: 0 auto;
                 max-width: 100%;
             }
+        
+            /* Hide all sections by default */
+            section {
+                display: none;
+            }
+        
         </style>
         
     </head>
