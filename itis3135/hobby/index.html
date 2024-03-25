@@ -107,19 +107,19 @@
             <h1>Astrophotography</h1>
             <!-- start of navigation bar-->
             <nav class="navbar">
-                    <a id="whatLink">Home</a>
+                    <a href="#what">Home</a>
                     ☆
-                    <a id="whoLink">Purpose</a>
+                    <a href="#who">Purpose</a>
                     ☆
-                    <a id="whenLink">Best Times</a>
+                    <a href="#when">Best Times</a>
                     ☆
-                    <a id="whereLink">Best Locations</a>
+                    <a href="#where">Best Locations</a>
                     ☆
-                    <a id="howLink">How to Start</a>
+                    <a ihref="#how">How to Start</a>
                     ☆
-                    <a id="whyLink">Why Start</a>
+                    <a href="#why">Why Start</a>
                     ☆
-                    <a id="promptsLink">AI Prompts</a>
+                    <a href="#prompts">AI Prompts</a>
             </nav>
              <!--end of navigation-->
         </header>
@@ -385,56 +385,26 @@
         </div>
         </footer>
         <script>
-            let whatlink = document.getElementById('whatlink');
-            let wholink = document.getElementById('wholink');
-            let whenlink = document.getElementById('whenlink');
-            let wherelink = document.getElementById('wherelink');
-            let howlink = document.getElementById('howlink');
-            let whylink = document.getElementById('whylink');
-            let ailink = document.getElementById('promptsLink');
-    
-            let what = document.getElementById('what');
-            let who = document.getElementById('who');
-            let when = document.getElementById('when');
-            let where = document.getElementById('where');
-            let how = document.getElementById('how');
-            let why = document.getElementById('why');
-            let ai = document.getElementById('prompts');
-    
-            let pages = [what, who, when, where, how, why, prompts]
-    
-            whatlink.addEventListener('click', function() {newPage(0)});
-            wholink.addEventListener('click', function() {newPage(1)});
-            whenlink.addEventListener('click', function() {newPage(2)});
-            wherelink.addEventListener('click', function() {newPage(3)});
-            howlink.addEventListener('click', function() {newPage(4)});
-            whylink.addEventListener('click', function() {newPage(5)});
-            ailink.addEventListener('click', function() {newPage(6)});
-    
-            window.onload = loadPage()
-    
-            function loadPage(){
-                for(let i = 0; i < pages.length; i++){
-                    if (i == 0){
-                        pages[i].style.display = "block";
-                    }
-                    else{
-                        pages[i].style.display = "none";
-                    }
-                }
-            }
-    
-            function newPage(index){
-                for(let i = 0; i < pages.length; i++){
-                    if (i == index){
-                        pages[i].style.display = "block";
-                    }
-                    else
-                    {
-                        pages[i].style.display = "none";
-                    }
-                }
-            }
+            function showSection(sectionId) {
+            document.querySelectorAll('section').forEach(section => {
+                section.style.display = 'none';
+            });
+
+            document.getElementById(sectionId).style.display = 'block';
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const navButtons = document.querySelectorAll('nav a');
+            const sectionIds = ['what', 'who', 'when', 'where', 'how', 'why', 'prompts'];
+
+            navButtons.forEach((button, index) => {
+                button.addEventListener('click', () => {
+                    showSection(sectionIds[index]);
+                });
+            });
+            
+            showSection('what'); //shows home by default
+        });
         </script>
     </body>
 </html>
