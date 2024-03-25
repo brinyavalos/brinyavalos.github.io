@@ -9,103 +9,102 @@
             body {
                 font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
                 color: #210535; /* Contrast: Dark text on light background */
-        background-color: #f5d5e0; /* Contrast: Light background */
-        margin: 0;
-        padding: 0;
-    }
-
-    h1, h2, h3, h4, h5, h6 {
-        color: #7b337d; /* Emphasis: Purple color */
-        text-align: center;
-        margin-top: 20px;
-    }
-
-    p {
-        margin: 10px 0;
-        color: #430d4d; /* Content: Dark purple text */
-    }
-
-    a {
-        color: #546bab; /* Links: Different color */
-        text-decoration: none;
-    }
-
-    a:hover {
-        text-decoration: underline;
-    }
-
-    nav.navbar {
-        text-align: center;
-        padding: 10px;
-        background-color: #c874b2; /* Navigation: Pink background */
-    }
-
-    nav.navbar a {
-        margin: 0 10px;
-        padding: 5px 15px;
-        border-radius: 20px;
-        background-color: #7b337d; /* Navigation Links: Purple background */
-        color: #f5d5e0; /* Navigation Links: Light text */
-        text-decoration: none;
-    }
-
-    nav.navbar a:hover {
-        background-color: #210535; /* Hover: Darker background */
-    }
-
-    main {
-        padding: 20px;
-    }
-
-    figure {
-        text-align: center;
-        margin: 20px 0;
-    }
-
-    figure img {
-        max-width: 80%; /* Make images smaller */
-        height: auto;
-    }
-
-    figcaption {
-        color: #210535; /* Caption: Dark text */
-    }
-
-    ul {
-        padding-left: 20px;
-    }
-
-    footer {
-        text-align: center;
-        padding: 10px 0;
-    }
-
-    footer p {
-        margin: 0;
-        color: #210535; /* Footer Text: Dark text */
-    }
-
-    .validation-buttons {
-        margin-top: 10px;
-    }
-
-    .validation-buttons img {
-        margin: 0 5px;
-        height: 30px;
-    }
-
-    .aipics {
-        display: block;
-        margin: 0 auto;
-        max-width: 100%;
-    }
-
-    /* Hide all sections by default */
-    section {
-        display: none;
-    }
-
-        </style>        
+                background-color: #f5d5e0; /* Contrast: Light background */
+                margin: 0;
+                padding: 0;
+            }
+        
+            h1, h2, h3, h4, h5, h6 {
+                color: #7b337d; 
+                text-align: center;
+                margin-top: 20px;
+            }
+        
+            p {
+                margin: 10px 0;
+                color: hsl(291, 71%, 18%); 
+                font-size: 18px; 
+                text-align: center; /* Center the text */
+                padding: 0 20px; /* Add padding */
+            }
+        
+            a {
+                color: #3722d9cc; 
+                text-decoration: none;
+            }
+        
+            a:hover {
+                text-decoration: underline;
+            }
+        
+            nav.navbar {
+                text-align: center;
+                padding: 10px;
+                background-color: #c874b2; 
+            }
+        
+            nav.navbar a {
+                margin: 0 10px;
+                padding: 5px 15px;
+                border-radius: 20px;
+                background-color: #7b337d; 
+                color: #f5d5e0; 
+                text-decoration: none;
+            }
+        
+            nav.navbar a:hover {
+                background-color: #210535; 
+            }
+        
+            main {
+                padding: 20px;
+            }
+        
+            figure {
+                text-align: center;
+                margin: 20px 0;
+            }
+            
+            figcaption {
+                color: #210535; 
+                font-size: 1.09pc;
+            }
+        
+            ul, ol {
+                padding-left: 20px;
+                font-size: 18px;
+                text-align: center; /* Center the text */
+                padding: 0 20px; /* Add padding */
+            }
+        
+            footer {
+                text-align: center;
+                padding: 10px 0;
+            }
+        
+            footer p {
+                margin: 0;
+                color: #210535; 
+            }
+        
+            .validation-buttons {
+                margin-top: 10px;
+            }
+        
+            .validation-buttons img {
+                margin: 0 5px;
+                height: 30px;
+            }
+        
+            .aipics {
+                width: 50%;
+                height: 50%;
+            }
+            #low {
+                font-size: 12px;
+            }
+        </style>
+             
     </head>
     <body>
         <header>
@@ -126,6 +125,8 @@
                     <a href="#why">Why Start</a>
                     ☆
                     <a href="#prompts">AI Prompts</a>
+                    ☆
+                    <a href="../index.html">Main Site ↺</a>
             </nav>
              <!--end of navigation-->
         </header>
@@ -176,6 +177,13 @@
             <!--Best places to go Astrophotography-->
             <section id="where">
                 <h2>Best locations</h2>
+                <figure>
+                    <img src="images/locations.jpg" alt="collage of every location" class="aipics" id="low">
+                    <figcaption>'Dark Sky Reserves for Astrophotography','National Parks Reserves for Astrophotography'
+                        ,'Costal Areas Reserves for Astrophotography','Dark Sky Reserves for Astrophotography',
+                        'Mountains and High Elevations for Astrophotography', and 'Countryside for Astrophotography' 
+                         - AI Prompts generate <strong>Copilot</strong></figcaption>
+                </figure>
                 <ul>
                     <!--list for resevers-->
                     <li><b>Dark Sky Reserves</b>
