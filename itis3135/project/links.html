@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mel's Creative Corner</title>
-    <link rel="icon" type="image/png" href="../images/favicon-32x32.png">
+    <link rel="icon" type="image/png" href="../images/plant.png">
     <link rel="stylesheet" href="styles.css"> 
 </head>
 <body>
     <header>
-        <div class="nav-system">
+        <div class="nav-system" role="navigation" >
+            <img src="../images/plant.png" alt="icon" id="icon">
             <h1>Mel's Creative Corner</h1>
             <nav>
                 <a href="./">Home</a>
@@ -22,10 +23,31 @@
         </div>
     </header>
     <main>
-        <h2>This is the Links Page.</h2>
+        <!--Github Link with image-->
+
+
+        <!--Linkedin Link with image-->
+
+
+        <!--Contact form to reach out to Mel!-->
+        <fieldset>
+            <legend>Contact Me!</legend>
+        <form>
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+            
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="4" required></textarea><br><br>
+            
+            <button type="submit">Send Message</button>
+        </form>
+    </fieldset>
     </main>
     <footer>
-
+        <p>&copy; 2024  <a href="../bmaodesigns.co/index.html" id="footer">BMAO Designs </a>. All rights reserved.</p>
     </footer>
     <script src="scripts.js"></script>
 </body>

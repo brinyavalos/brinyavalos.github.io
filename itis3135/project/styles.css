@@ -5,15 +5,22 @@
     --text-color: #59656f;
     --background-color: #1d1e2c;
 }
-
-/* Header styles */
-header {
-    background-color: var(--primary-color);
-    color: var(--text-color);
-    padding: 5px;
+body {
+    background-color: var(--tertiary-color);
+    color: var(--background-color-color);
+    margin: 0;
+    padding: 0;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Navigation styles */
+/*The Coding style for the overall navigation bar*/
+header {
+    background-color: var(--primary-color);
+    color: var(--background-color-color);
+    padding: 10px;
+    margin: 25px;
+    border-radius: 20px;
+}
 .nav-system {
     display: flex;
     justify-content: space-between;
@@ -22,16 +29,35 @@ header {
 
 nav {
     display: flex;
+    font-size: 16px;
 }
 
 nav a {
-    margin-left: 10px; /* Adjust spacing between links */
+    margin-left: 10px;
     color: var(--text-color);
     text-decoration: none;
 }
+a:hover {
+    text-decoration: none;
+    color: pink;
+}
+h1 {
+    margin-left: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    text-align: left;
+}
 
-/* Media query for small screens */
+#icon {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
 @media (max-width: 600px) {
+    .nav-system {
+        position: relative;
+    }
+
     nav {
         display: none;
         flex-direction: column;
@@ -46,4 +72,125 @@ nav a {
     .nav-system.active nav {
         display: flex;
     }
+
+    .nav-toggle {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 10px;
+        font-size: 24px;
+        cursor: pointer;
+        color: var(--text-color);
+    }
+}
+
+
+/*Home Page*/
+.home {
+    display: flex;
+    align-items: center; 
+    flex-direction: column; 
+    text-align: center; 
+    margin-top: 50px;
+}
+#pic-name {
+    display: flex;
+    align-items: center; 
+    margin-bottom: 10px; 
+}
+
+#melsfirst {
+    width: 220px;
+    height: 260px;
+    border-radius: 50%; 
+    margin-right: 30px; 
+}
+
+#pic-name h2 {
+    margin: 0;
+    font-size: 24px;
+}
+@media (max-width: 600px) {
+    #melsfirst {
+        width: 100px; 
+        height: 100px;
+    }
+    #pic-name h2 {
+        font-size: 18px; 
+    }
+}
+#word-for-home{
+    margin-left: 25%;
+    margin-right: 25%;
+    text-align: left;
+    font-size: 17px;
+    margin-bottom: 120px;
+    margin-top: 2.5%;
+}
+
+
+
+
+/*the about me styles*/
+.about-para, .about-para2{
+ text-align: left;
+ font-size: 15px;
+}
+.about-para{
+    display: flex;
+    padding: 15px 15px 15px 15px;
+    background-color: var(--secondary-color);
+    margin: 50px 170px 35px 25px; 
+    border: 2.5px outset;
+}
+.about-para2{
+    display: flex;
+    padding: 15px 15px 15px 15px; 
+    background-color: var(--background-color);
+    color: var(--primary-color);
+    margin: 15px 25px 20px 170px; 
+    border: 2.5px inset; 
+}
+
+/*skills*/
+#skillsmain{
+    display: flex;
+    flex-direction: row;
+}
+fieldset {
+    flex: 1;
+    margin-right: 20px;
+}
+
+#rrsection {
+    flex: 1;
+    margin-top: 15px;
+}
+
+#resume {
+    max-width: 100%;
+    height: auto;
+}
+
+.soft{
+    padding-bottom: 5px;
+    margin-bottom: 100px; 
+    padding-right: 10px;
+}
+
+
+
+/*the code to create the footer styles*/
+footer {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    position: auto;
+    bottom: 0;
+}
+#footer{
+    color: var(--text-color);
+    text-decoration: none;
 }

@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mel's Creative Corner</title>
-    <link rel="icon" type="image/png" href="../images/favicon-32x32.png">
+    <link rel="icon" type="image/png" href="../images/plant.png">
     <link rel="stylesheet" href="styles.css"> 
 </head>
 <body>
     <header>
-        <div class="nav-system">
+        <div class="nav-system" role="navigation" >
+            <img src="../images/plant.png" alt="icon" id="icon">
             <h1>Mel's Creative Corner</h1>
             <nav>
                 <a href="./">Home</a>
@@ -21,11 +22,38 @@
             </nav>
         </div>
     </header>
-    <main>
-        <h2>This is the Skills Page.</h2>
+    <main id="skillsmain">
+        <fieldset class="soft">
+            <legend>Soft Skils</legend>
+            <ul>
+                <li>Communication</li>
+                <li>Team Management</li>
+                <li>Project Planning</li>
+                <li>Peer Mentoring</li>
+                <li>Interpersonal Skills</li>
+                <li>Problem Solving</li>
+            </ul>
+        </fieldset>
+        <fieldset class="soft">
+            <legend>Techical Skills</legend>
+            <ul>
+                <li>Java </li>
+                <li>Python</li>
+                <li>CSS</li>
+                <li>HTML</li>
+                <li>C</li>
+                <li>JavaScript</li>
+                <li>MYSQL</li>
+                <li>Figma</li>
+            </ul>
+        </fieldset>
+        <div id="rrsection">
+            <h3>My Resume: </h3>
+            <img src="../images/resume.jpg" alt="resume" id="resume">
+        </div>
     </main>
     <footer>
-
+        <p>&copy; 2024  <a href="../bmaodesigns.co/index.html" id="footer">BMAO Designs </a>. All rights reserved.</p>
     </footer>
     <script src="scripts.js"></script>
 </body>
