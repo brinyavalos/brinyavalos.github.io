@@ -254,3 +254,10 @@ button {
 .index-pic{
     width: 50%;
 }
+
+.review-img{
+    width: 80%;
+    box-shadow: 0 0 3px 3px pink;
+    border-radius: 8px 10px;
+    margin: 0px 10px 0px 70px; 
+}
