@@ -15,7 +15,7 @@
             <nav>
                 <a href="./">Home</a>
                 <a href="about.html">About</a>
-                <a href="skills.html">Skills</a>
+                <a href="experience.html">Experience</a>
                 <a href="projects.html">Projects</a>
                 <a href="links.html">Contact</a>
                 
@@ -23,7 +23,66 @@
         </div>
     </header>
     <main>
-        <h2>This is the projects page. </h2>
+        <div class="project-container">
+            <div class="project-column" id="project-column">
+                <div class="project" onclick="showDescription(0)">
+                    <h3>Foodies: A Comprehensive Design and Analysis</h3>
+                    <img src="./images/foodies.jpg" alt="foodies" class="img-projects">
+                </div>
+                <div class="project" onclick="showDescription(1)">
+                    <h3>Hospital Database in SQL</h3>
+                    <img src="./images/sql-data.jpg" alt="sql" class="img-projects">
+                </div>
+                <div class="project" onclick="showDescription(2)">
+                    <h3>OnlineBank</h3>
+                    <img src="./images/online-banking.jpg" alt="onlinebank" class="img-projects">
+                </div>
+            <div class="description-column">
+                <div class="description">
+                    <p><b>Course:</b> ITIS 3130 Human-Centered Design<br>
+                        <b>Professor:</b> Dr. Berto Gonzalez<br>
+                        <b>Team Members:</b> Jorge Velasco, Kandjoura Drame, Ryan Hutchens, and Melissa Rivera.<br><br>
+                        
+                        Our project centered on enhancing user experience through a human-centered design approach. 
+                        Beginning with needfinding, we analyzed user data to identify key challenges and develop clear design and usability goals. 
+                        Using these insights, we crafted personas and designed different versions of the prototype, incorporating signifiers, affordances, metaphors, 
+                        and modalities. Through heuristic evaluations, we refined the prototype based on given feedback, ensuring it complied with usability heuristics. 
+                        Following in-person and virtual user testing sessions allowed us to gather direct feedback, and evaluate the prototype's effectiveness in meeting user needs and
+                         achieving design objectives. Finally, by combining these findings from testing and evaluations, we conducted a comprehensive evaluation
+                          of the prototype, refining it further for an optimized user experience.</p>
+                         <i>Associated with University of North Carolina at Charlotte</i>
+                         <br><br>
+                         <a class="download" href="./images/foodies.pdf" download>Download Foodies Final Design Report - PDF</a>
+                         <br>
+                         <button onclick="showProjects()" class="back-projects">Back</button>
+                </div>
+                <div class="description">
+                    <p><b>Course:</b> ITSC 3160 Database Design and Implementation<br>
+                        <b>Professor:</b> Dr. Sara Riazi<br>
+                        
+                        The project focuses on ensuring the correctness of the Entity-Relationship Diagram (EERD) for the given requirements, as well as the relational design. 
+                        Additionally, to populate the database with sufficient data to test its functionality and include various database features such as views, triggers, 
+                        transactions, and a diverse set of queries.</p>
+                        <i>Associated with University of North Carolina at Charlotte</i>
+                        <br><br>
+                        <a class="download" href="./images/3160.pdf" download>Download Final Report - PDF</a>
+                        <br>
+                    <button onclick="showProjects()" class="back-projects">Back</button>    
+                </div>
+                <div class="description">
+                    <p>This project, coded in Java, incorporates concepts learned from ITSC 1212 and 1213. Some included topics are exceptions, inheritance, file I/O, and arrayList. 
+                        The objective of this project is to manage and retrieve existing accounts using either last name or account number as identifiers. It also enables the creation
+                         of new accounts, deposits, withdraws, balance inquiries, and more. When the code is terminated, the system generates a comprehensive banking receipt as a file.
+                        <br>
+                        The code has essentially reached its final stages and successfully achieved its intended objective. However, 
+                        there are areas that require attention in order to enhance the project's overall coherence.</p>
+                        <br>
+                        <a  class="download"href="https://github.com/melissarfranco25/OnlineBank/blob/main/Customer.java">Explore This Projects Code here!</a>
+                        <br>
+                    <button onclick="showProjects()" class="back-projects">Back</button>    
+                </div>
+            </div>
+        </div>
     </main>
     <footer>
         <p>Designed by <a href="../bmaodesigns.co/index.html" id="footer">BMAO Designs </a>&copy;2023</p>
@@ -34,6 +93,7 @@
             <img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!">
              </a>
     </footer>
-    <script src="scripts.js"></script>
+    <script src="../scripts/HTMLInclude.js"></script>
+    <script src="../project/script.js"></script>
 </body>
 </html>

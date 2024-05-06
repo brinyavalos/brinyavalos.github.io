@@ -15,7 +15,7 @@
             <nav>
                 <a href="./">Home</a>
                 <a href="about.html">About</a>
-                <a href="skills.html">Skills</a>
+                <a href="experience.html">Experience</a>
                 <a href="projects.html">Projects</a>
                 <a href="links.html">Contact</a>
                 
@@ -23,27 +23,32 @@
         </div>
     </header>
     <main>
+        <h2>Mel's Socials</h2>
+        <section class="logo">
         <!--Github Link with image-->
-
+        <a href="https://www.linkedin.com/in/melissarfranco/" alt="link-to-logo"><img src="./images/linkedin.png" alt="logo" id="logo1"></a>
 
         <!--Linkedin Link with image-->
-
-
+        <a href="https://github.com/melissarfranco25" alt="link-to-logo"><img src="./images/github.png" alt="logo" id="logo2"></a>
+        </section>
+        <h2>Mel's Resume</h2>
+        <section class="logo">
+                <a class="download" href="./images/RESUMENEW.pdf" download>Download Resume - PDF</a>
+        </section>
+        <h3 id="dateTime">time time time</h3>
         <!--Contact form to reach out to Mel!-->
-        <fieldset>
-            <legend>Contact Me!</legend>
-        <form>
-            <label for="name">Your Name:</label>
-            <input type="text" id="name" name="name" required><br><br>
-            
-            <label for="email">Your Email:</label>
-            <input type="email" id="email" name="email" required><br><br>
-            
-            <label for="message">Message:</label><br>
-            <textarea id="message" name="message" rows="4" required></textarea><br><br>
-            
-            <button type="submit">Send Message</button>
-        </form>
+        <section class="contact-form">
+            <h2>Send me a message</h2>
+            <form id="contact-form" action="mailto:briavatiz02@gmail.com" method="post" enctype="text/plain">
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" required><br>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br>
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" required></textarea><br>
+                <button type="submit" id="submit-btn">Submit</button>
+            </form>
+        </section>
     </fieldset>
     </main>
     <footer>
@@ -55,6 +60,6 @@
             <img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!">
              </a>
     </footer>
-    <script src="scripts.js"></script>
+    <script src="../project/script.js"></script>
 </body>
 </html>

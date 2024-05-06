@@ -42,3 +42,58 @@ document.addEventListener('DOMContentLoaded', function() {
         window.location.href = mailtoLink;
     });
 });
+/*function showDescription(index) {
+    var descriptions = document.querySelectorAll('.description');
+    descriptions.forEach(function(description) {
+        description.style.display = 'none';
+    });
+    descriptions[index].style.display = 'block';
+}*/
+function showDescription(index) {
+    var descriptions = document.querySelectorAll('.description');
+    var projects = document.querySelectorAll('.project');
+
+    descriptions.forEach(function(description) {
+        description.style.display = 'none';
+    });
+
+    projects.forEach(function(project, i) {
+        if (i !== index) {
+            project.style.display = 'none';
+        } else {
+            project.style.display = 'block';
+        }
+    });
+
+    descriptions[index].style.display = 'block';
+}
+function showProjects() {
+    var projects = document.querySelectorAll('.project');
+    var descriptions = document.querySelectorAll('.description');
+
+    projects.forEach(function(project) {
+        project.style.display = 'block';
+    });
+
+    descriptions.forEach(function(description) {
+        description.style.display = 'none';
+    });
+}
+
+dodocument.getElementById('contact-form').addEventListener('submit', function(event) {
+    // Prevent the default form submission behavior
+    event.preventDefault();
+
+    // Optionally, you can add form validation here before opening the mail app
+
+    // Get the form data
+    var formData = new FormData(this);
+
+    // Construct the mailto URL with the form data
+    var mailtoURL = 'mailto:your_email@example.com' +
+                    '?subject=' + encodeURIComponent('New message from ' + formData.get('name')) +
+                    '&body=' + encodeURIComponent(formData.get('message'));
+
+    // Open the user's default mail app with pre-filled content
+    window.location.href = mailtoURL;
+});

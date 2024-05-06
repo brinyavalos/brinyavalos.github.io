@@ -12,6 +12,14 @@ body {
     padding: 0;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+.download{
+    text-align: center;
+    color:var(--text-color);
+    text-decoration: underline; 
+    font-style:italic; 
+    font-weight: bold;
+}
+
 
 /*The Coding style for the overall navigation bar*/
 header {
@@ -132,53 +140,237 @@ h1 {
 
 
 /*the about me styles*/
-.about-para, .about-para2{
- text-align: left;
- font-size: 15px;
-}
-.about-para{
+.about-section {
     display: flex;
-    padding: 15px 15px 15px 15px;
-    background-color: var(--secondary-color);
-    margin: 50px 170px 35px 25px; 
-    border: 2.5px outset;
-}
-.about-para2{
-    display: flex;
-    padding: 15px 15px 15px 15px; 
-    background-color: var(--background-color);
-    color: var(--primary-color);
-    margin: 15px 25px 20px 170px; 
-    border: 2.5px inset; 
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px; 
 }
 
-/*skills*/
-#skillsmain{
-    display: flex;
-    flex-direction: row;
+.about-pic {
+    margin-top: 20px;
+    margin-bottom: 20px; 
+    border-radius: 10px;
+    max-width: 40%;
+}
+
+.about-para {
+    max-width: 60%;
+    text-align: justify; 
+    margin-bottom: 20px; 
 }
 fieldset {
-    flex: 1;
+    border: 2px solid var(--primary-color);
+    border-radius: 20px;
+    padding: 20px;
+}
+legend{
+    font-weight: 700;
+}
+@media (max-width: 600px) {
+    .about-section {
+        margin-bottom: 30px; 
+    }
+
+    .about-para,
+    .about-para2 {
+        max-width: 100%; 
+    }
+}
+
+
+
+/*experience*/
+.course{
+    flex-basis: calc(50% - 20px);
+    margin-bottom: 30px;
+}
+
+h4 {
+    text-align: center;
+}
+
+.skill-div {
+    margin-bottom: 100px;
+    margin-top: 35px;
+}
+
+.main {
     margin-right: 20px;
+    margin-left: 30%;
 }
 
-#rrsection {
+li {
+    list-style-type: none;
+    margin-bottom: 5px;
+    margin-right: 0%;
+}
+
+.bar-inner {
+    background-color: #ddbdd5;
+    height: 20px;
+    transition: width 1s ease;
+    border: 1px solid #1d1e2c;
+}
+
+.bar {
+    width: 100%; 
+}
+.label {
+    text-align: right;
+    width: 30%;
+}
+
+.value {
+    width: 20%;
+}
+
+table {
+    width: 50%;
+    margin: 20px auto;
+}
+
+td {
+    padding: 8px;
+}
+.catalog{
+    text-align: center;
+}
+#cc{
+    text-decoration: none;
+    color: pink;
+}
+#cc:hover{
+    color: var(--background-color);
+}
+
+/*Projects Page*/
+.project-container {
+    display: flex;
+    margin-left: 250px; 
+    margin-right: 250px;
+    margin-top: 60px;
+}
+
+.project-column {
     flex: 1;
-    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
 }
 
-#resume {
-    max-width: 100%;
-    height: auto;
+.project {
+    padding: 10px;
+    border: 1.5px solid var(--background-color);
+    margin-bottom: 45px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    background-color: var(--secondary-color);
+    text-align: center;
 }
 
-.soft{
-    padding-bottom: 5px;
-    margin-bottom: 100px; 
-    padding-right: 10px;
+.project:hover {
+    transform: translateX(20px);
+}
+
+.description-column {
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.description {
+    display: none;
+    padding: 10px;
+    border: 1.5px solid var(--background-color);
+    margin-bottom: 20px;
+    background-color: var(--primary-color);
+}
+
+.project:hover + .description {
+    display: block;
+}
+.img-projects{
+    width: 120px;
+    height: 120px;
+}
+.back-projects{
+    background-color: var(--primary-color);
+    border: 2px solid var(--tertiary-color);
+    float: right;
 }
 
 
+/*links code*/
+.logo{
+    text-align: center;
+    margin-top: 35px;
+    margin-bottom: 40px;
+}
+#logo1, #logo2{
+    width: 120px;
+}
+#logo1{
+    margin-right: 15px;
+}
+.contact-form {
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: left;
+    margin-left: 35%;
+    margin-right: 35%;
+}
+h2{
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input, textarea {
+    width: 50%;
+    margin-bottom: 15px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background-color: none;
+    color: var(--background-color);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+#status-message {
+    margin-top: 10px;
+    font-weight: bold;
+}
+#dateTime{
+    text-align: center;
+}
+
+
+.catalog{
+    text-decoration: none;
+    color: pink;
+    text-align: left;
+    text-align: center;
+}
+.catalog:hover{
+    color: var(--background-color);
+}
 
 /*the code to create the footer styles*/
 footer {
@@ -192,4 +384,36 @@ footer {
 #footer {
     color: var(--text-color);
     text-decoration: none;
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    main {
+        width: 90%;
+    }
+    img {
+        width: 50%;
+    }
+}
+
+/* Tablet */
+@media screen and (min-width: 601px) and (max-width: 980px) {
+    main {
+        width: 90%;
+        font-size: 18px;
+    }
+    img {
+        width: 60%;
+    }
+}
+
+/* Mobile */
+@media screen and (min-width: 370px) and (max-width: 600px) {
+    main {
+        width: 85%;
+        font-size: 16px;
+    }
+    img {
+        width: 50%;
+    }
 }

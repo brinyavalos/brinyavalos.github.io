@@ -261,3 +261,65 @@ button {
     border-radius: 8px 10px;
     margin: 0px 10px 0px 70px; 
 }
+/*SlideShow css*/
+.slideshow-container {
+    position: relative;
+    border: 2px solid #fb6090;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 25px; 
+    margin-bottom: 50px;
+    width: 45%;
+    margin-left: 110px;
+}
+
+.slide {
+    display: none;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+}
+
+.caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fb6090;
+    font-size: 24px;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white; 
+}
+h4{ 
+    text-align: center; 
+}
