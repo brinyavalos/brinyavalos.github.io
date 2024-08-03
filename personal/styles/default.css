@@ -1,0 +1,67 @@
+/* styles/default.css */
+
+body {
+    font-family:Georgia, 'Times New Roman', Times, serif; 
+    margin: 0;
+    padding: 0;
+    background-color: #f9eae1; /* Light background color */
+    color: #2d2d2d; /* Dark text color for contrast */
+}
+
+header {
+    background-color: #cc8b86; /* Primary color */
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+main {
+    padding: 20px;
+}
+
+.welcome {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: #cc8b86; 
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-weight: bolder;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+    text-decoration: dashed;
+    margin-left: 70px;
+}
+
+a {
+    text-decoration: none;
+    color: #aa998f; 
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #d1be9c; 
+}
+
+footer {
+    background-color: #2d2d2d; 
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
