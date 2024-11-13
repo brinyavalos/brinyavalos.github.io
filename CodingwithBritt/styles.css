@@ -1,0 +1,114 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e6bccd; /* Light pastel background */
+    color: #012a36; /* Dark blue text for contrast */
+    line-height: 1.6;
+}
+
+/* Header styles */
+header {
+    background-color: #29274c; /* Dark purple header */
+    color: #e6bccd; /* Light pastel text */
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+}
+
+header h1 {
+    font-size: 2.5rem;
+}
+
+/* Navigation styles */
+nav {
+    margin-top: 1rem;
+}
+
+nav a {
+    color: #d295bf; /* Light pink color for links */
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.1rem;
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+nav a:hover {
+    color: #7e52a0; /* Purple color on hover */
+    text-decoration: underline;
+}
+
+/* Main content styles */
+main {
+    padding: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #fff; /* White background for content */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+}
+
+h2 {
+    font-size: 2rem;
+    color: #29274c; /* Dark purple for headings */
+    margin-bottom: 1rem;
+}
+
+p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+ul {
+    list-style-type: none;
+    margin-bottom: 2rem;
+}
+
+ul li {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Footer styles */
+footer {
+    background-color: #29274c; /* Dark purple footer */
+    color: #e6bccd; /* Light pastel text */
+    padding: 1rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        text-align: center;
+        margin-top: 1rem;
+    }
+
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    main {
+        padding: 1rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    p, ul li {
+        font-size: 1rem;
+    }
+}
