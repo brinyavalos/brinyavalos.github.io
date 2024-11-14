@@ -19,6 +19,7 @@ header {
     color: #e6bccd; /* Light pastel text */
     padding: 1.5rem;
     text-align: center;
+    border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
 }
 
@@ -49,15 +50,17 @@ main {
     padding: 2rem;
     max-width: 1000px;
     margin: 0 auto;
-    background-color: #fff; /* White background for content */
+    margin-top: 15px; 
+    background-color: #fff;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
     font-size: 2rem;
-    color: #29274c; /* Dark purple for headings */
+    color: #29274c;
     margin-bottom: 1rem;
+    text-align: center;
 }
 
 p {
@@ -77,11 +80,12 @@ ul li {
 
 /* Footer styles */
 footer {
-    background-color: #29274c; /* Dark purple footer */
-    color: #e6bccd; /* Light pastel text */
+    background-color: #29274c;
+    color: #e6bccd; 
     padding: 1rem;
     text-align: center;
     margin-top: 2rem;
+    border-radius: 8px;
 }
 
 footer p {
